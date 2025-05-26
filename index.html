@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مطعم تايم برجر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #ff0000;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .underline {
+      width: 60px;
+      height: 4px;
+      background-color: #ff0000;
+      margin: 0 auto 30px;
+      border-radius: 2px;
+    }
+
+    .info-box {
+      background-color: white;
+      color: #000;
+      border-radius: 50px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin: 15px auto;
+      width: fit-content;
+      max-width: 90%;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .info-box img {
+      width: 40px;
+      margin-left: 15px;
+    }
+
+    .info-text {
+      text-align: right;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fff8f0;
+    }
+
+    header {
+      background-color: #d32f2f;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    .product-card {
+      transition: transform 0.3s ease;
+    }
+   .products {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+    .order-btn {
+      background-color: #d32f2f;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .order-btn:hover {
+      background-color: #b71c1c;
+    }
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #c62828;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    nav {
+      background-color: #b71c1c;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .product {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      padding: 15px;
+      background: white;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .productt img {
+      width: 40%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 60px;
+    }
+    .product h3 {
+      color: #d32f2f;
+      margin-top: 15px;
+    }
+    footer {
+      background-color: #c62828;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .team, .contact {
+      background-color: #fff3e0;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      margin-top: 10px;
+      background-color: #d32f2f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #d32f2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    .cart {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border: 2px solid #d32f2f;
+}
+
+.cart h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #d32f2f;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-items li {
+  font-size: 16px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #d32f2f;
+  list-style: none;
+  text-align: right;
+}
+
+.remove-btn {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+    /* قسم المشروبات */
+    .drinks {
+      background-color: #fefefe;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .drinks h2 {
+      color: #b71c1c;
+      margin-bottom: 30px;
+    }
+
+    .drink {
+      margin-bottom: 20px;
+    }
+
+/* موبايلات وتابلت بعرض 768 بكسل أو أقل */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  header, nav, footer {
+    text-align: center;
+  }
+
+  .container, .content, .menu, .contact-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>مطعم تايم برجر</h1>
+    <p>أفضل برجر واستربس في المدينة</p>
+  </header>
+  <nav>
+    <a href="#menu">المنيو</a>
+    <a href="#gallery">الصور</a>
+    <a href="#drink"> المشروبات</a>
+    <a href="#team">فريق العمل</a>
+    <a href="#mmmm">معلومات المقرر</a>
+    <a href="#contact">تواصل معنا</a>  
+  </nav>
+
+<section id="menu">  
+  <h2>المنيو </h2>
+  <div class="products">
+    <img src="2efbc94c-0178-47ff-b9a6-e617af51604d.jpg" alt="صورة المنيو">
+  </div>
+</section>
+  <section id="gallery">
+    <section class="products">
+    <h2>صور الأطباق</h2>
+    <div class="product">
+      <img src="f686f763-6a01-4ab8-9a20-d9bc932ad984.jpg" alt="وجبة برجر كومبو">
+     <h3> جنيهCLASSIC BEEF- 80 </h3>
+        <button class="order-btn" onclick="addToCart('CLASSIC BURGER', 50)">اطلب الآن</button>
+    </div>
+    <div class="product">
+        <img src="dd90c94b-a170-4482-a8a5-69eb0d841026.jpg" alt="استربس دجاج">
+        <h3>جنيهBACON CHEESEBYRGER- - 99 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="a90a15b2-aba1-4102-bfea-ea128b3867ae.jpg" alt="استربس دجاج">
+        <h3>جنيهSPICY CHEESEBYRGER- 110 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="6048dc27-c902-48e9-b2cb-15eab7c2b398.jpg" alt="استربس دجاج">
+        <h3> جنيهSPICY BUEGER - 120 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="853f546d-26fd-46c1-b692-a3d38f67f9e0.jpg" alt="استربس دجاج">
+        <h3> جنيهBEEF BUEGER - 130- </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="710a8742-157c-4fad-88f5-38fc0fb227b4.jpg" alt="استربس دجاج">
+        <h3> جنيهCHICKEN BUEGER - 150 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="97de2f37-1aa5-4ffb-bab2-f1b498ad23c2.jpg" alt="استربس دجاج">
+        <h3>جنيه BIG BOX BEEF - 170 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="94a6e3a3-e4e6-4e2b-b90a-31e23d2ac63f.jpg" alt="استربس دجاج">
+        <h3> جنيهHAMMER EANCH BEEF - 180 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+      <div class="product">
+        <img src="05e47ed9-1ad4-4b70-af10-18cebb82e7a5.jpg" alt="استربس دجاج">
+        <h3> جنيهMOZZARELLA BEEF - 200 </h3>
+        <button class="order-btn">اطلب الآن</button>
+      </div>
+  </section>
+      <section id="drink">
+  <h2>المشروبات</h2>
+  <section class="products">
+    <div class="product">
+      <img src="cf2d01bc-2c3c-49ce-8458-0a97f1668a21.jpg">
+      <h3>بيبسي صغير - 10 جنيه</h3>
+      <button class="order-btn">اطلب الآن</button>
+    </div>
+    <div class="product">
+      <img src="b9ceac87-3096-4251-be7f-977056207788.jpg">
+      <h3>بيبسي كبير - 15 جنيه</h3>
+      <button class="order-btn">اطلب الآن</button>
+    </div>
+    <div class="product">
+      <img src="12b2a01d-53cd-49f2-8477-2eb43899936e.jpg">
+      <h3>عصير مانجو - 20 جنيه</h3>
+      <button class="order-btn">اطلب الآن</button>
+    </div>
+    <div class="product">
+      <img src="tttt.jpg">
+      <h3>مياه معدنية - 7 جنيه</h3>
+      <button class="order-btn">اطلب الآن</button>
+    </div>
+  </section>
+</section>
+  <section id="team" class="team">
+    <section id="team-section" style="text-align: center; padding: 40px; background-color: #f9f9f9;">
+        <h2 style="color: #b71c1c;">فريق العمل</h2>
+        <div class="productt">
+          <img src="taha.jpg"  hight="40",width="50",border="5"style="border: 5px solid #000;">
+        </div>
+        <!-- المصمم الرئيسي -->
+        <div style="margin-bottom: 40px;">
+
+          <div style="display: inline-block; background-color: #d32f2f; color: white; padding: 15px 25px; border-radius: 12px; font-size: 20px;">
+            طه عمر عبد العزيز – مصمم الموقع
+          </div>
+        </div>     
+        <!-- باقي الفريق -->
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+          <div style="background-color: #f44336; color: white; padding: 15px 20px; border-radius: 10px; width: 200px;">
+              انس كامل محمود– تنسيق وتصميم
+          </div>
+          <div style="background-color: #f44336; color: white; padding: 15px 20px; border-radius: 10px; width: 200px;">
+             حازم رجب رمضان فرحات– كتابة المحتوى
+          </div>
+          <div style="background-color: #f44336; color: white; padding: 15px 20px; border-radius: 10px; width: 200px;">
+             احمد عشرى عبد الكريم – صور المنتجات
+          </div>
+          <div style="background-color: #f44336; color: white; padding: 15px 20px; border-radius: 10px; width: 200px;">
+              – مراجعة لغوية
+          </div>
+        </div>
+      </section>
+  </section>
+  <section id="mmmm">
+   <h2>معلومات المقرر</h2>
+<div class="underline"></div>
+
+<div class="info-box">
+  
+  <div class="info-text">تحت إشراف دكتور/ شعبان</div>
+</div>
+
+<div class="info-box">
+  
+  <div class="info-text">كلية التربية النوعية جامعة الفيوم<br>تخصص تكنولوجيا التعليم الرقمى</div>
+</div>
+
+<div class="info-box">
+ 
+  <div class="info-text">مقرر تصميم المواقع</div>
+</div>
+</section>
+  <section id="contact" class="contact">
+    <h2>تواصل معنا</h2>
+    <form>
+      <input type="text" placeholder="الاسم" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea rows="4" placeholder="رسالتك" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+  <div id="cart" class="cart">
+  <h3>سلة الطلبات</h3>
+  <ul id="cart-items"></ul>
+</div>
+<script>
+  const cartItemsList = document.getElementById("cart-items");
+  function addToCart(productName, price) {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `${productName} - ${price} جنيه 
+      <button class="remove-btn" onclick="this.parentElement.remove()">X</button>`;
+    cartItemsList.appendChild(listItem);
+  }
+
+  const orderButtons = document.querySelectorAll(".order-btn");
+
+  orderButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const productCard = this.closest(".product");
+      const productName = productCard.querySelector("h3").innerText.split(" - ")[0].trim();
+      const priceText = productCard.querySelector("h3").innerText.match(/(\d+)/);
+      const price = priceText ? parseInt(priceText[0]) : 0;
+
+      addToCart(productName, price);
+    });
+  });
+</script>
+</body>
+</html>
